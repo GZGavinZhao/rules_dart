@@ -25,24 +25,28 @@ PLATFORMS = {
             "@platforms//os:macos",
             "@platforms//cpu:x86_64",
         ],
+        dart_name = "macos-x64",
     ),
     "aarch64-apple-darwin": struct(
         compatible_with = [
             "@platforms//os:macos",
             "@platforms//cpu:aarch64",
         ],
+        dart_name = "macos-arm64",
     ),
     "x86_64-unknown-linux-gnu": struct(
         compatible_with = [
             "@platforms//os:linux",
             "@platforms//cpu:x86_64",
         ],
+        dart_name = "linux-x64",
     ),
     "x86_64-pc-windows-msvc": struct(
         compatible_with = [
             "@platforms//os:windows",
             "@platforms//cpu:x86_64",
         ],
+        dart_name = "windows-x64",
     ),
 }
 

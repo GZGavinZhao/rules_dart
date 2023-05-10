@@ -36,11 +36,11 @@ def rules_dart_dependencies():
 _DOC = "Fetch external tools needed for dart toolchain"
 _ATTRS = {
     "dart_version": attr.string(mandatory = True, values = TOOL_VERSIONS.keys()),
-    "platform": attr.string(mandatory = True, values = PLATFORMS.keys()),
+    "platform": attr.string(mandatory = True, values = [p.dart_name for p in PLATFORMS.values()]),
 }
 
 def _dart_repo_impl(repository_ctx):
-    url = "https://github.com/someorg/someproject/releases/download/v{0}/dart-{1}.zip".format(
+    url = "https://storage.googleapis.com/dart-archive/channels/stable/release/{0}/sdk/dartsdk-{1}-release.zip".format(
         repository_ctx.attr.dart_version,
         repository_ctx.attr.platform,
     )
@@ -82,10 +82,10 @@ def dart_register_toolchains(name, register = True, **kwargs):
             Should be True for WORKSPACE users, but false when used under bzlmod extension
         **kwargs: passed to each node_repositories call
     """
-    for platform in PLATFORMS.keys():
+    for platform, meta in PLATFORMS.items():
         dart_repositories(
             name = name + "_" + platform,
-            platform = platform,
+            platform = meta.dart_name,
             **kwargs
         )
         if register:

@@ -11,7 +11,7 @@ bazel_dep(name = "gazelle", version = "0.29.0", repo_name = "bazel_gazelle", dev
 bazel_dep(name = "bazel_skylib_gazelle_plugin", version = "1.4.1", dev_dependency = True)
 
 dart = use_extension("//dart:extensions.bzl", "dart")
-dart.toolchain(dart_version = "1.14.2")
+dart.toolchain(dart_version = "1.19.0")
 use_repo(dart, "dart_toolchains")
 
 register_toolchains("@dart_toolchains//:all")

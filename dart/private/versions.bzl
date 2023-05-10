@@ -11,4 +11,11 @@ TOOL_VERSIONS = {
         "x86_64-pc-windows-msvc": "sha384-35YN6TKpT0L9qyRBmq48NucvyXEtHnkeC+txf2YZmmJTmOzrAKREA74BA0EZvpar",
         "x86_64-unknown-linux-gnu": "sha384-QgGOwTaetxY0h5HWCKc/3ZtBs4N/fgaaORthn7UcEv++Idm9W+ntCCZRwvBdwHPD",
     },
+    # TODO: allow users to specify their own sha
+    "1.19.0": {
+        "x86_64-apple-darwin": "sha384-el4SwcRXIVST+BkkrYVwRPY4WaJ+amEk0DifTWZKVEppdtTPTdoXdzUWK+2lLFeB",
+        "aarch64-apple-darwin": "sha384-OR0UtTdWHjgbfxoRh3OzI0+XB4WhCmsFo3mkFIJshRYWJJaaBgsnIWC15Yabdvmm",
+        "x86_64-pc-windows-msvc": "sha384-rkYgR+tL6l3A9Deknjfms5H1SoZac0SxDfLXpYOP7Kdp4bhqSsnmZc3CQPPVncIA",
+        "x86_64-unknown-linux-gnu": "sha384-P1YR/T4Ndwlu5BKkQWyUX3q6oTfISo3FresToOpnFSiqIylZ+IRKSCfYICryVcNY",
+    },
 }
